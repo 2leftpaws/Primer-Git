@@ -13,11 +13,12 @@
 #echo *Terminado
 #ls -d *te* -- quitar despues
 #fi
-ESTADO="$1"
+DIR="$1"
+ESTADO="$2"
 filtro_archivos () {
-echo "Proyectos $1:" 
+cd $1
+echo "Proyectos $2:" 
 echo "---------------------"
-ls -d *$1 
+ls -d *$2 
 }
-filtro_archivos $1
-#echo *$1
+filtro_archivos $1 $2
